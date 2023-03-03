@@ -19,11 +19,11 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
 
-      _notificationServices.getDeviceToken().then((value) => 
+    _notificationServices.getDeviceToken().then((value) => 
     
-      print(value),
+     print(value),
       
-      );
+    );
   }
 
   @override

@@ -24,8 +24,8 @@ class NotificationServices {
     }
   }
 
-    Future<String?> getDeviceToken() async {
-      String? token = await messaging.getToken();
-      return token;
-    }
+  Future<String?> getDeviceToken() async {
+    String? token = await messaging.getToken();
+    return token;
+  }
 }
