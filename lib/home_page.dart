@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 import 'notification_services.dart';
@@ -14,22 +16,23 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _notificationServices.requestNotificationsPermition();
+
+    _notificationServices.getDeviceToken().then(
+          (value) => print(value),
+        );
+
+    _notificationServices.firebaseInit();
+
     super.initState();
-
-
-    _notificationServices.getDeviceToken().then((value) => 
-    
-     print(value),
-      
-    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(title: const  Text("This is title"),),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("This is title"),
+      ),
     );
   }
 }
