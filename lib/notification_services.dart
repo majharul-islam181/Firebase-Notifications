@@ -49,14 +49,13 @@ class NotificationServices {
   // function to initialise flutter local notification plugin to show
   // notifications for android when app is active
 
-  final FlutterLocalNotificationsPlugin _flutterlocationNotifications =
-      FlutterLocalNotificationsPlugin();
+  final FlutterLocalNotificationsPlugin _flutterlocationNotifications = FlutterLocalNotificationsPlugin();
 
   void initLocalNotifications(
       BuildContext context, RemoteMessage message) async {
     var androidInitializationSettings =
         const AndroidInitializationSettings('@mipmap/ic_launcher');
-    // for ios
+    // for ios 
     // var iosInitializationSettings = const DarwinInitializationSettings();
 
     var initializationSetting = InitializationSettings(
